@@ -5,9 +5,10 @@ import Projects from "./pages/Projects";
 import { Link } from "react-router-dom";
 
 function App() {
+
   return (
-    <div className="text-white">
-     
+  <div className="text-white">
+     <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/agence" element={<Agence />} />

@@ -7,22 +7,22 @@ const Agence = () => {
   const imageDivRef = useRef(null);
   const imageRef = useRef(null);
 
- const imageArray = [
+  const imageArray = [
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1463453091185-61582044d556?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=640&h=960&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=640&h=960&fit=crop&crop=face",
+  ];
   
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1463453091185-61582044d556?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1521119989659-a83eee488004?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=640&h=960&fit=crop&crop=face",
-  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=640&h=960&fit=crop&crop=face",
-];
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(function () {
@@ -30,9 +30,14 @@ const Agence = () => {
       scrollTrigger: {
         trigger: imageDivRef.current,
         start: "top 20%",
-        end: "top -100%",
+        end: "top -80%",
         pin: true,
-        markers: true,
+        pinSpacing: true,
+        pinReparent: true,
+        pinType: "transform",
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+
         onUpdate: function (elem) {
           let index;
           if (elem.progress < 1) {
@@ -45,30 +50,31 @@ const Agence = () => {
       },
     });
   });
+
   return (
     <div>
-      <div className="section1">
+      <div className="section1 py-1">
         <div
           ref={imageDivRef}
-          className="h-[45vh] w-[15vw] overflow-hidden rounded-3xl  absolute top-35 left-[29.5vw] bg-red-500"
+          className="h-[30vh] w-[40vw] sm:h-[35vh] sm:w-[30vw] md:h-[40vh] md:w-[20vw] lg:h-[45vh] lg:w-[15vw] overflow-hidden rounded-3xl absolute top-20 left-[5vw] sm:left-[10vw] md:left-[20vw] lg:left-[29.5vw] bg-red-500"
         >
           <img
             ref={imageRef}
-            className="h-[100%] w-[100%] object-cover"
+            className="h-full w-full object-cover"
             src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7"
           />
         </div>
-        <div className=" relative font-[font2]">
-          <div className="mt-[55vh]">
-            <h1 className="text-[20vw] uppercase text-center leading-[17vw]">
+        <div className="relative font-[font2]">
+          <div className="mt-[40vh] sm:mt-[45vh] md:mt-[50vh] lg:mt-[55vh]">
+            <h1 className="text-[15vw] sm:text-[18vw] md:text-[20vw] uppercase text-center leading-[13vw] sm:leading-[15vw] md:leading-[17vw]">
               SEVEN7Y
               <br />
               TWO
             </h1>
           </div>
 
-          <div className="pl-[40%] mt-10">
-            <p className="text-6xl ">
+          <div className="px-4 sm:px-8 md:pl-[30%] lg:pl-[40%] mt-6 md:mt-10">
+            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl">
               &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; We're
               inquisitive and open-minded, and we make sure creativity crowds
               out ego from every corner. A brand is a living thing, with values,
