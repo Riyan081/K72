@@ -22,7 +22,7 @@ body{
   opacity:0;
 }
 
-.Link:hover .moveLink{
+.link:hover .moveLink{
   opacity:1;
   transition: opacity 0.5s ease-in-out;
 }

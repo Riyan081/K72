@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useRef, useState } from "react";
+import { NavbarContext } from "../../context/NavContext";
 
 const Navbar = () => {
   const navGreefRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
+ const {navOpen, setNavOpen} =  useContext(NavbarContext)
 
   return (
     <div className=" z-10  flex justify-between fixed top-0 w-full items-start ">
@@ -23,6 +25,9 @@ const Navbar = () => {
         </svg>
       </div>
       <div
+      onClick={()=>{
+        setNavOpen(true)
+      }}
         onMouseEnter={() => {
           navGreefRef.current.style.height = "100%";
           setIsHovered(true);
