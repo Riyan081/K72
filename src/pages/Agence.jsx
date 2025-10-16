@@ -37,6 +37,7 @@ const Agence = () => {
         pinType: "transform",
         anticipatePin: 1,
         invalidateOnRefresh: true,
+        markers: true,
 
         onUpdate: function (elem) {
           let index;

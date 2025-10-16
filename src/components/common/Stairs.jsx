@@ -45,7 +45,7 @@ const Stairs = ({ children }) => {
         opacity: 0,
         duration: 1,
         delay: 1,
-        scale:1.2
+        scale:1.5
       });
     },
     [currentPath]
