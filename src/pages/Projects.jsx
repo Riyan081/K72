@@ -39,7 +39,7 @@ const Projects = () => {
       },
       scrollTrigger:{
         trigger:".lol",
-        markers:true,
+        
         start:"top 100%",
         end:"top -250%",
         scrub:true,
@@ -50,14 +50,14 @@ const Projects = () => {
 
 
   return (
-    <div className="p-6">
+    <div className="lg:p-6 p-3">
       <div className=" pt-[30vh] mb-[10vh]">
-        <h1 className="font-[font2] text-[7vw] uppercase"> Projects</h1>
+        <h1 className="font-[font2] lg:text-[7vw] text-[7vh] uppercase"> Projects</h1>
       </div>
 
       <div className="-mt-20 lol">
         {projects.map((project, index) => (
-           <div key={index} className="hero w-full h-[500px] mt-5 flex gap-4 ">
+           <div key={index} className="hero w-full h-[500px] mt-5 flex lg:flex-row flex-col gap-4 ">
           <ProjectCard key={index} image1={project.image1} image2={project.image2}/>
             </div>
         ))}

@@ -4,8 +4,8 @@ import videoSrc from "../../assets/69496b2d.mp4";
 const HomeHeroText = () => {
   return (
     <div className="font-[font1] pt-5 text-center">
-      <div className="text-[10vw] uppercase leading-[20vh]"> The spark For</div>
-      <div className="text-[10vw] uppercase flex items-center justify-center leading-[20vh]">
+      <div className="lg:text-[10vw] text-[12vw] uppercase lg:leading-[20vh] max-sm:mt-50"> The spark For</div>
+      <div className="lg:text-[10vw] text-[12vw] uppercase flex items-center justify-center lg:leading-[20vh] leading-0 ">
         All{" "}
         <div
           className="relative h-[8vw] w-[17vw] rounded-full overflow-hidden"
@@ -31,7 +31,7 @@ const HomeHeroText = () => {
         {" "}Things
       </div>
       
-      <div className="text-[10vw] uppercase leading-[20vh]">creativE</div>
+      <div className="lg:text-[10vw] uppercase lg:leading-[20vh] text-[12vw] mt-1">creativE</div>
     </div>
   );
 };
